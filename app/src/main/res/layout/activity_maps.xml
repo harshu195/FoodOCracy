@@ -1,38 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f5f1e0f">
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:id="@+id/map"
-    tools:context="edu.temple.appsnmaps.foodocracy.MapsActivity"
-    android:name="com.google.android.gms.maps.SupportMapFragment" />
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="edu.temple.appsnmaps.foodocracy.MapsActivity" />
 
     <EditText
+        android:id="@+id/srcText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/srcText"
-        android:hint="Search Truck"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:background="#0f5f1e0f"
+        android:hint="Search Truck"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:paddingTop="@dimen/activity_vertical_margin" />
 
     <ImageButton
+        android:id="@+id/ibtnGo"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:id="@+id/ibtnGo"
-        android:src="@drawable/ic_arrow"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#ffffffff"
-        android:layout_alignTop="@+id/srcText" />
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/srcText"
+        android:background="#0f5f1e0f"
+        android:src="@drawable/ic_arrow" />
 
 
 </RelativeLayout>

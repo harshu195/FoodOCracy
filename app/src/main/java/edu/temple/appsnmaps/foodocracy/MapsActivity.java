@@ -1,5 +1,6 @@
 package edu.temple.appsnmaps.foodocracy;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Criteria;
 import android.location.Location;
@@ -24,7 +25,6 @@ public class MapsActivity extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private static final LatLng TempleU = new LatLng(39.9800884, -75.1576642);
-    private EditText mySearch;
     ImageButton ibtnGo;
 
     @Override
@@ -42,37 +42,25 @@ public class MapsActivity extends FragmentActivity {
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         // Create a criteria object to retrieve provider
         Criteria criteria = new Criteria();
-
-
-        // Get the name of the best provider
         String provider = locationManager.getBestProvider(criteria, true);
-
         Location location = locationManager.getLastKnownLocation(provider);
-        // Get latitude of the current location
         double latitude = location.getLatitude();
-
-        // Get longitude of the current location
         double longitude = location.getLongitude();
-
-        // Create a LatLng object for the current location
         LatLng latLng = new LatLng(latitude, longitude);
-
-        // Show the current location in Google Map
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-
-        mySearch = (EditText) findViewById(R.id.srcText);
-        mySearch.setBackgroundColor(Color.parseColor("#ffffff"));
-
 
         ibtnGo = (ImageButton) findViewById(R.id.ibtnGo);
         ibtnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MapsActivity.this
-                        , mySearch.getText().toString()
+                        , ((EditText)findViewById(R.id.srcText)).getText().toString()
                         , Toast.LENGTH_LONG).show();
+
+                Intent i = new Intent(MapsActivity.this, RewardStatus.class);
+                startActivity(i);
+                finish();
             }
         });
     }

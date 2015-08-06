@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:weightSum="1"
+    android:background="#0f5f1e0f">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:id="@+id/ibtnLogo"
+            android:src="@drawable/da"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFoodname"
+                android:text="test"
+                android:textSize="30sp"
+                android:textColor="#a8122a" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPts"
+                android:text="2pts"
+                android:textSize="30sp"
+                android:textColor="#a8122a" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
