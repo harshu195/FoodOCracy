@@ -35,21 +35,19 @@ public class MapsActivity extends FragmentActivity {
         setUpMapIfNeeded();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
-        //mapFragment.getMapAsync(this);
         mMap.setMyLocationEnabled(true);
 
-
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        // Create a criteria object to retrieve provider
         Criteria criteria = new Criteria();
         String provider = locationManager.getBestProvider(criteria, true);
         Location location = locationManager.getLastKnownLocation(provider);
-        double latitude = location.getLatitude();
-        double longitude = location.getLongitude();
-        LatLng latLng = new LatLng(latitude, longitude);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-
+        if (location!=null){
+            double longitude = location.getLongitude();
+            double latitude = location.getLatitude();
+            LatLng latLng = new LatLng(latitude, longitude);
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+        }
         ibtnGo = (ImageButton) findViewById(R.id.ibtnGo);
         ibtnGo.setOnClickListener(new View.OnClickListener() {
             @Override
