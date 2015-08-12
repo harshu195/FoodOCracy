@@ -6,4 +6,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_reward_status">RewardStatus</string>
+    <string name="title_activity_redeem_rewards">RedeemRewards</string>
 </resources>

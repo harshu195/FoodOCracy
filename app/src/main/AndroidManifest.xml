@@ -42,6 +42,10 @@
             android:name=".RewardStatus"
             android:label="@string/title_activity_reward_status" >
         </activity>
+        <activity
+            android:name=".RedeemRewards"
+            android:label="@string/title_activity_redeem_rewards" >
+        </activity>
     </application>
 
 </manifest>

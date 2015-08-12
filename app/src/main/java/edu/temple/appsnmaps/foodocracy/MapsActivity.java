@@ -47,7 +47,13 @@ public class MapsActivity extends FragmentActivity {
             LatLng latLng = new LatLng(latitude, longitude);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+        }else{
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(TempleU));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
         }
+
+        EditText mySearch = (EditText)findViewById(R.id.srcText);
+        mySearch.setBackgroundColor(Color.parseColor("#ffffff"));
         ibtnGo = (ImageButton) findViewById(R.id.ibtnGo);
         ibtnGo.setOnClickListener(new View.OnClickListener() {
             @Override
