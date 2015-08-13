@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -12,7 +13,6 @@ import edu.temple.appsnmaps.foodocracy.Adapter.RewardStatusAdapter;
 import edu.temple.appsnmaps.foodocracy.Classes.Food;
 
 public class RewardStatus extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +29,13 @@ public class RewardStatus extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ((ImageView) findViewById(R.id.ivBowl)).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onClick(View v) {
                 Intent i = new Intent(RewardStatus.this, RedeemRewards.class);
                 startActivity(i);
                 finish();
             }
         });
-
     }
 }

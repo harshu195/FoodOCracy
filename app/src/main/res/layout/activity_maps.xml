@@ -12,6 +12,13 @@
         android:layout_height="match_parent"
         tools:context="edu.temple.appsnmaps.foodocracy.MapsActivity" />
 
+
+
+    <include layout="@layout/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/srcText" />
+
     <EditText
         android:id="@+id/srcText"
         android:layout_width="fill_parent"
@@ -27,6 +34,8 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin" />
+
+
 
     <ImageButton
         android:id="@+id/ibtnGo"
