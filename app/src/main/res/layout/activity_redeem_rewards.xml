@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Starbucks"
+                android:textColor="#a8122a"
                 android:id="@+id/placename" />
 
             <TextView
@@ -39,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Points: 312pts"
+                android:textColor="#a8122a"
                 android:id="@+id/pts" />
 
             <TextView
@@ -46,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Coupons: 2cps"
+                android:textColor="#a8122a"
                 android:id="@+id/qpons" />
         </LinearLayout>
 
@@ -64,10 +67,12 @@
         android:layout_height="wrap_content"
         android:text="Redeem My Points"
         android:id="@+id/button"
+        android:textColor="#f5f1e0"
         android:layout_weight="0.61"
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#a8122a" />
 
     <Button
         android:layout_width="wrap_content"
@@ -75,9 +80,11 @@
         android:text="Available Coupons"
         android:id="@+id/button2"
         android:layout_weight="0.39"
+        android:textColor="#f5f1e0"
         android:layout_below="@+id/linearLayout"
         android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout" />
+        android:layout_alignEnd="@+id/linearLayout"
+        android:background="#a8122a" />
 
     <ListView
         android:layout_width="wrap_content"

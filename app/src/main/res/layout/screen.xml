@@ -26,6 +26,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#a8122a"
             android:text="Location"
             android:layout_marginLeft="10dp"/>
 
@@ -33,6 +34,7 @@
             android:id="@+id/textV2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#a8122a"
             android:text="Points"
             android:layout_marginLeft="275dp"
             android:textSize="18dp" />

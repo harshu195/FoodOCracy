@@ -1,5 +1,6 @@
 package edu.temple.appsnmaps.foodocracy;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import edu.temple.appsnmaps.foodocracy.Adapter.RewardStatusAdapter;
 import edu.temple.appsnmaps.foodocracy.Classes.Food;
 
-public class RewardStatus extends AppCompatActivity {
+public class RewardStatus extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,5 +1,6 @@
 package edu.temple.appsnmaps.foodocracy;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 import edu.temple.appsnmaps.foodocracy.Adapter.CustomListAdapter;
 
-public class RedeemRewards extends AppCompatActivity {
+public class RedeemRewards extends Activity {
     ImageView img;
     ListView list;
     String[] itemname ={

@@ -117,10 +117,6 @@ public class MapsActivity extends FragmentActivity {
         ibtnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MapsActivity.this
-                        , ((EditText) findViewById(R.id.srcText)).getText().toString()
-                        , Toast.LENGTH_LONG).show();
-
                 Intent i = new Intent(MapsActivity.this, RewardStatus.class);
                 startActivity(i);
                 finish();
